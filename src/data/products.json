@@ -1,0 +1,236 @@
+[
+  {
+    "id": "1",
+    "title": "Кроссовки Nike Air Force",
+    "imgCatalog": "02.jpg",
+    "imgMain": "01.png",
+    "priceMain": 11000,
+    "priceOld": 22000,
+    "article": 879876,
+    "size": [36, 37, 38, 39, 40, 41, 43, 44, 45, 46],
+    "description": "Кроссовки Nike Air Force '77 Vintage Suede с винтажной подошвой возрождают стиль баскетбольных моделей Nike прошлого, создавая впечатление, что они хранились в шкафу долгие годы.",
+    "characteristics": {
+      "gender": "Male",
+      "color": "Разноцветный",
+      "composition": "Кожа, текстиль, резина",
+      "country": "Вьетнам"
+    },
+    "quantity": 10
+  },
+  {
+    "id": "4",
+    "title": "Кроссовки Nike Air Max",
+    "imgCatalog": "02.jpg",
+    "imgMain": "01.png",
+    "priceMain": 12500,
+    "priceOld": 25000,
+    "article": 879877,
+    "size": [39, 40, 41],
+    "description": "Кроссовки Nike Air Max с инновационной амортизацией, обеспечивающей непревзойденный комфорт при каждом шаге.",
+    "characteristics": {
+      "gender": "Female",
+      "color": "Белый",
+      "composition": "Текстиль, синтетика, резина",
+      "country": "Китай"
+    },
+    "quantity": 15
+  },
+  {
+    "id": "5",
+    "title": "Кроссовки Nike Blazer",
+    "imgCatalog": "02.jpg",
+    "imgMain": "01.png",
+    "priceMain": 9000,
+    "priceOld": 18000,
+    "article": 879878,
+    "size": [42, 43, 44],
+    "description": "Кроссовки Nike Blazer с классическим силуэтом и премиальными материалами, придающие винтажный вид и современный комфорт.",
+    "characteristics": {
+      "gender": "Male",
+      "color": "Черный",
+      "composition": "Кожа, текстиль, резина",
+      "country": "Вьетнам"
+    },
+    "quantity": 20
+  },
+  {
+    "id": "6",
+    "title": "Кроссовки Nike React",
+    "imgCatalog": "02.jpg",
+    "imgMain": "01.png",
+    "priceMain": 13500,
+    "priceOld": 27000,
+    "article": 879879,
+    "size": [36, 37, 38],
+    "description": "Кроссовки Nike React с продвинутой технологией амортизации, обеспечивающей гладкую и плавную посадку.",
+    "characteristics": {
+      "gender": "Female",
+      "color": "Синий",
+      "composition": "Текстиль, синтетика, резина",
+      "country": "Индонезия"
+    },
+    "quantity": 12
+  },
+  {
+    "id": "7",
+    "title": "Кроссовки Nike Pegasus",
+    "imgCatalog": "02.jpg",
+    "imgMain": "01.png",
+    "priceMain": 14000,
+    "priceOld": 28000,
+    "article": 879880,
+    "size": [38, 39, 40],
+    "description": "Кроссовки Nike Pegasus с прочной конструкцией и отличной поддержкой, идеально подходят для длительных пробежек.",
+    "characteristics": {
+      "gender": "Female",
+      "color": "Красный",
+      "composition": "Текстиль, синтетика, резина",
+      "country": "Китай"
+    },
+    "quantity": 18
+  },
+  {
+    "id": "8",
+    "title": "Кроссовки Nike ZoomX",
+    "imgCatalog": "02.jpg",
+    "imgMain": "01.png",
+    "priceMain": 16000,
+    "priceOld": 32000,
+    "article": 879881,
+    "size": [41, 42, 43],
+    "description": "Кроссовки Nike ZoomX с максимальной энергией возврата и отличной амортизацией для профессиональных спортсменов.",
+    "characteristics": {
+      "gender": "Female",
+      "color": "Зеленый",
+      "composition": "Текстиль, синтетика, резина",
+      "country": "Вьетнам"
+    },
+    "quantity": 14
+  },
+  {
+    "id": "9",
+    "title": "Кроссовки Nike Free Run",
+    "imgCatalog": "02.jpg",
+    "imgMain": "01.png",
+    "priceMain": 11500,
+    "priceOld": 23000,
+    "article": 879882,
+    "size": [40, 41, 42],
+    "description": "Кроссовки Nike Free Run с минималистичным дизайном, обеспечивающим естественное движение стопы и максимальный комфорт.",
+    "characteristics": {
+      "gender": "Female",
+      "color": "Серый",
+      "composition": "Текстиль, синтетика, резина",
+      "country": "Индонезия"
+    },
+    "quantity": 10
+  },
+  {
+    "id": "10",
+    "title": "Кроссовки Nike LunarEpic",
+    "imgCatalog": "02.jpg",
+    "imgMain": "01.png",
+    "priceMain": 14500,
+    "priceOld": 29000,
+    "article": 879883,
+    "size": [37, 38, 39],
+    "description": "Кроссовки Nike LunarEpic с легкой амортизацией и поддержкой, идеально подходящие для долгих тренировок и забегов.",
+    "characteristics": {
+      "gender": "Female",
+      "color": "Желтый",
+      "composition": "Текстиль, синтетика, резина",
+      "country": "Вьетнам"
+    },
+    "quantity": 8
+  },
+  {
+    "id": "11",
+    "title": "Кроссовки Nike Odyssey React",
+    "imgCatalog": "02.jpg",
+    "imgMain": "01.png",
+    "priceMain": 13000,
+    "priceOld": 26000,
+    "article": 879884,
+    "size": [36, 37, 38],
+    "description": "Кроссовки Nike Odyssey React с технологией React для непревзойденной мягкости и комфорта на протяжении всего дня.",
+    "characteristics": {
+      "gender": "Female",
+      "color": "Оранжевый",
+      "composition": "Текстиль, синтетика, резина",
+      "country": "Китай"
+    },
+    "quantity": 14
+  },
+  {
+    "id": "12",
+    "title": "Кроссовки Nike Vapormax",
+    "imgCatalog": "02.jpg",
+    "imgMain": "01.png",
+    "priceMain": 15500,
+    "priceOld": 31000,
+    "article": 879885,
+    "size": [38, 39, 40],
+    "description": "Кроссовки Nike Vapormax с инновационной воздушной подушкой, обеспечивающей легкость и удобство на каждом шагу.",
+    "characteristics": {
+      "gender": "Female",
+      "color": "Фиолетовый",
+      "composition": "Текстиль, синтетика, резина",
+      "country": "Индонезия"
+    },
+    "quantity": 12
+  },
+  {
+    "id": "13",
+    "title": "Кроссовки Nike Joyride",
+    "imgCatalog": "02.jpg",
+    "imgMain": "01.png",
+    "priceMain": 16500,
+    "priceOld": 33000,
+    "article": 879886,
+    "size": [41, 42, 43],
+    "description": "Кроссовки Nike Joyride с уникальной системой микрошариков, адаптирующихся под каждое движение, обеспечивая непревзойденный комфорт.",
+    "characteristics": {
+      "gender": "Female",
+      "color": "Розовый",
+      "composition": "Текстиль, синтетика, резина",
+      "country": "Вьетнам"
+    },
+    "quantity": 9
+  },
+  {
+    "id": "14",
+    "title": "Кроссовки Nike Air Presto",
+    "imgCatalog": "02.jpg",
+    "imgMain": "01.png",
+    "priceMain": 12000,
+    "priceOld": 24000,
+    "article": 879887,
+    "size": [37, 38, 39],
+    "description": "Кроссовки Nike Air Presto с эластичным верхом и прочной подошвой для максимальной гибкости и удобства.",
+    "characteristics": {
+      "gender": "Female",
+      "color": "Голубой",
+      "composition": "Текстиль, синтетика, резина",
+      "country": "Индонезия"
+    },
+    "quantity": 11
+  },
+  {
+    "id": "15",
+    "title": "Кроссовки Nike Air Jordan",
+    "imgCatalog": "02.jpg",
+    "imgMain": "01.png",
+    "priceMain": 17500,
+    "priceOld": 35000,
+    "article": 879888,
+    "size": [40, 41, 42],
+    "description": "Кроссовки Nike Air Jordan с культовым дизайном и премиальными материалами, воплощают в себе стиль и комфорт, идеально подходящие для повседневной носки.",
+    "characteristics": {
+      "gender": "Male",
+      "color": "Черный",
+      "composition": "Кожа, текстиль, резина",
+      "country": "Вьетнам"
+    },
+    "quantity": 13
+  }
+]

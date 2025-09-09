@@ -1,0 +1,33 @@
+.logo {
+    font-family: var(--third-family);
+    font-weight: 700;
+    font-size: clamp(1.563rem, 1.449rem + 0.57vw, 1.875rem); //30-25
+}
+
+.header-bottom {
+    position: relative;
+
+    ::before {
+        content: "SneakMax";
+        position: absolute;
+        top: 54%;
+        left: 53%;
+        transform: translate(-50%, -50%);
+        font-family: var(--third-family);
+        font-weight: 700;
+        font-size: clamp(2.5rem, -1.136rem + 18.18vw, 12.5rem); //200-40
+        color: rgba(255, 255, 255, 0.02);
+        white-space: nowrap;
+        pointer-events: none;
+        z-index: -10; /* Убедитесь, что основной контент выше этого слоя */
+
+        @media (max-width: 630px) {
+            display: none;
+        }
+    }
+
+    .button:hover {
+        opacity: 0.8;
+        background: var(--accent) !important;
+    }
+}

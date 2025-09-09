@@ -1,0 +1,41 @@
+// ползунки цены
+.range-thumb {
+    position: absolute;
+    width: 100%;
+    appearance: none;
+    pointer-events: none;
+    top: 50%;
+}
+
+.range-thumb::-webkit-slider-thumb {
+    appearance: none;
+    pointer-events: all;
+    width: 16px;
+    height: 16px;
+    background-color: var(--text-color-main);
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-top: -7px;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.range-thumb::-moz-range-thumb {
+    pointer-events: all;
+    width: 16px;
+    height: 16px;
+    background-color: var(--text-color-main);
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+// размер
+.filter-size {
+    label {
+        transition:
+            background-color 0.5s,
+            color 0.3s;
+    }
+}
