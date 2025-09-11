@@ -58,6 +58,31 @@ class CartStore {
         this.items = [];
     }
 
+    // Получить общую стоимость без скидки
+    get totalOriginalPrice() {
+        return this.items.reduce((total, item) => {
+            const originalPrice = item.product.priceOld || item.product.priceMain;
+            return total + (originalPrice * item.quantity);
+        }, 0);
+    }
+
+    // Получить общую сумму скидки
+    get totalDiscount() {
+        return this.items.reduce((total, item) => {
+            if (item.product.priceOld) {
+                const discountPerItem = item.product.priceOld - item.product.priceMain;
+                return total + (discountPerItem * item.quantity);
+            }
+            return total;
+        }, 0);
+    }
+
+
+    // Проверить, есть ли товары со скидкой в корзине
+    get hasDiscountItems() {
+        return this.items.some(item => item.product.priceOld);
+    }
+
     // Получить общее количество товаров
     get totalItems() {
         return this.items.reduce((total, item) => total + item.quantity, 0);

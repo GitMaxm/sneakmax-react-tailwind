@@ -1,28 +1,26 @@
 // layout/Header.tsx
-import { useState } from "react";
+// import { useState } from "react";
 import Navigation from "../layout/Navigation";
 import Button from "../ui/Button";
-import CartDropdown from "../features/cart/CartDropdown";
+// import CartDropdown from "../features/cart/CartDropdown";
 
 const Header = () => {
-    const [isCartOpen, setIsCartOpen] = useState(false);
+    // const [isCartOpen, setIsCartOpen] = useState(false);
 
-    const handleCartToggle = () => {
-        setIsCartOpen(true);
-    };
+    // const handleCartModal = () => {
+    //     setIsCartOpen(true);
+    // };
 
-    const handleCartClose = () => {
-        setIsCartOpen(false);
-    };
+    // const handleCartClose = () => {
+    //     setIsCartOpen(false);
+    // };
 
     return (
         <header className="header text-white">
             <div className="container">
                 <div className="relative">
-                    <Navigation
-                        onCartClick={handleCartToggle}
-                    />
-                    {isCartOpen && <CartDropdown onClose={handleCartClose} />}
+                    <Navigation />
+                    {/* {isCartOpen && <CartDropdown onClose={handleCartClose} />} */}
                 </div>
 
                 {/* Нижняя часть шапки */}

@@ -5,13 +5,13 @@ export interface IProductItem {
     description: string;
     priceMain: number;
     priceOld?: number;
-    article: string;
+    article: number;
     quantity: number;
     imgMain: string;
     imgCatalog: string;
     size: number[];
     characteristics: {
-        gender: 'Male' | 'Female';
+        gender: string;
         // gender: 'Male' | 'Female' | 'Unisex';
         color: string;
         composition: string;

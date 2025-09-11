@@ -1,13 +1,22 @@
+import { observer } from "mobx-react-lite";
 import CartButton from "../features/cart/CartButton";
 import { navLinks } from "@/helper/navLink";
+import { useStores } from "@/Context/rootStoreContext";
 
 // layout/Navigation.tsx
-interface NavigationProps {
-    onCartClick: () => void;
-    cartItemsCount?: number;
-}
+// interface NavigationProps {
+//     onCartClick: () => void;
+//     cartItemsCount?: number;
+// }
 
-const Navigation = ({ onCartClick }: NavigationProps) => {
+const Navigation = observer(() => {
+
+    const { modalCartOpen } = useStores()
+
+    const handleCartModal = () => {
+        modalCartOpen.openCartModal();
+    };
+
     return (
         <div className="flex items-center justify-between py-3 border-b border-white gap-4 flex-wrap">
             {/* Логотип */}
@@ -22,12 +31,12 @@ const Navigation = ({ onCartClick }: NavigationProps) => {
                         </li>
                     ))}
                     <li>
-                        <CartButton onClick={onCartClick} />
+                        <CartButton onClick={handleCartModal} />
                     </li>
                 </ul>
             </nav>
         </div>
     );
-};
+});
 
 export default Navigation;
