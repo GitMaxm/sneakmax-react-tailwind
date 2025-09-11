@@ -10,6 +10,7 @@ import RootStore from './stores/RootStore';
 import About from './components/sections/About';
 
 import { ToastContainer } from 'react-toastify';
+import CartModal from './components/features/cart/CartModal';
 
 function App() {
   // Используем useRef для создания и сохранения экземпляра хранилища
@@ -40,6 +41,8 @@ function App() {
         pauseOnHover
         theme="light"
       />
+
+      <CartModal />
 
     </RootStoreContext.Provider>
   );
