@@ -54,7 +54,7 @@ const CartDropdown = observer(({ onClose, isOpen = true }: CartDropdownProps) =>
                         <div key={`${item.product.id}-${item.selectedSize}`} className="flex items-center justify-between gap-3 mb-3">
                             <div className="w-24">
                                 <img
-                                    src={`/img/catalog/product/${item.product.imgMain}`}
+                                    src={`img/catalog/product/${item.product.imgMain}`}
                                     alt={item.product.title}
                                     className="w-full h-full object-cover cursor-pointer"
                                     onClick={() => handleProductClick(item.product, onClose)}
@@ -92,7 +92,7 @@ const CartDropdown = observer(({ onClose, isOpen = true }: CartDropdownProps) =>
                                 className="p-2 hover:bg-gray-100 rounded cursor-pointer"
                                 onClick={() => handleRemoveFromCart(item.product.id, item.selectedSize, item.product.title)}
                             >
-                                <img src="/img/header/trash.svg" alt="Удалить" />
+                                <img src="img/header/trash.svg" alt="Удалить" />
                             </button>
                         </div>
                     ))

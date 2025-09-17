@@ -35,7 +35,7 @@ const ProductItem = ({ product, handleCardShow, handleAddToCart }: ProductItemPr
         <div className="mb-4 catalog-product flex flex-col justify-between max-w-[280px]">
             <div className="catalog-product-hover cursor-pointer" onClick={() => handleCardShow(product.id)}>
                 <img
-                    src={`/img/catalog/product/${product.imgCatalog}`}
+                    src={`img/catalog/product/${product.imgCatalog}`}
                     alt={product.title}
                 />
 
@@ -47,7 +47,7 @@ const ProductItem = ({ product, handleCardShow, handleAddToCart }: ProductItemPr
                             className="w-5 h-5"
                         >
                             <img
-                                src="/img/catalog/show.svg"
+                                src="img/catalog/show.svg"
                                 alt="Просмотреть товар"
                             />
                         </button>
@@ -94,7 +94,7 @@ const ProductItem = ({ product, handleCardShow, handleAddToCart }: ProductItemPr
             >
                 <img
                     className="w-5 h-5"
-                    src="/img/catalog/cart-add.svg"
+                    src="img/catalog/cart-add.svg"
                     alt="Добавить в корзину"
                 />
                 Добавить в корзину

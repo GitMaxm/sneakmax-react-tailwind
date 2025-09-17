@@ -51,7 +51,7 @@ const CartModal = observer(() => {
                     &times;
                 </button>
 
-                <div className="p-10">
+                <div className="sm:p-10 p-4 pt-10">
                     <div className="flex justify-between items-center mb-4">
                         <h3 className="text-xl font-bold">Корзина</h3>
                         <span className="text-gray-500">Заказ 3456 67</span>
@@ -81,7 +81,7 @@ const CartModal = observer(() => {
                             )}
 
                             {/* Итоговая сумма */}
-                            <div className="flex justify-between items-center text-lg font-bold border-t pt-2">
+                            <div className="flex justify-between items-center sm:text-lg text-sm font-bold border-t pt-2">
                                 <span>Итоговая сумма:</span>
                                 <span>{cartStore.totalPrice} ₽</span>
                             </div>
@@ -109,66 +109,70 @@ const CartModal = observer(() => {
                                         const hasDiscount = !!item.product.priceOld;
 
                                         return (
-                                            <div key={`${item.product.id}-${item.selectedSize}`} className="flex items-center justify-between gap-3">
-                                                <div className="w-20 flex-shrink-0">
-                                                    <img
-                                                        src={`/img/catalog/product/${item.product.imgMain}`}
-                                                        alt={item.product.title}
-                                                        className="w-full h-full object-cover cursor-pointer rounded"
-                                                        onClick={() => handleProductClick(item.product, modalCartOpen.closeCartModal)}
-                                                    />
-                                                </div>
-                                                <div className="flex-1 min-w-0">
-                                                    <p
-                                                        className="text-sm font-medium mb-1 cursor-pointer hover:text-blue-600 line-clamp-2"
-                                                        onClick={() => handleProductClick(item.product, modalCartOpen.closeCartModal)}
-                                                    >
-                                                        {item.product.title}
-                                                    </p>
-                                                    <p className="text-xs text-gray-500 mb-2">Размер: {item.selectedSize}</p>
+                                            <div key={`${item.product.id}-${item.selectedSize}`} className="flex items-center justify-between flex-wrap gap-2 pb-4 border-b-1 border-gray-300">
+                                                <div className="flex gap-2">
+                                                    <div className="w-20 flex-shrink-0">
+                                                        <img
+                                                            src={`img/catalog/product/${item.product.imgMain}`}
+                                                            alt={item.product.title}
+                                                            className="w-full h-full object-cover cursor-pointer rounded"
+                                                            onClick={() => handleProductClick(item.product, modalCartOpen.closeCartModal)}
+                                                        />
+                                                    </div>
+                                                    <div className="flex-1">
+                                                        <p
+                                                            className="text-sm font-medium mb-1 cursor-pointer hover:text-blue-600 line-clamp-2"
+                                                            onClick={() => handleProductClick(item.product, modalCartOpen.closeCartModal)}
+                                                        >
+                                                            {item.product.title}
+                                                        </p>
+                                                        <p className="text-xs text-gray-500 mb-2">Размер: {item.selectedSize}</p>
 
-                                                    {/* Цены для товара */}
-                                                    <div className="flex items-center gap-2">
-                                                        {hasDiscount ? (
-                                                            <>
-                                                                <span className="text-gray-400 line-through text-sm">
-                                                                    {originalPrice} ₽
-                                                                </span>
-                                                                <span className="text-lg font-bold">
+                                                        {/* Цены для товара */}
+                                                        <div className="flex items-center gap-2">
+                                                            {hasDiscount ? (
+                                                                <>
+                                                                    <span className="text-gray-400 line-through text-sm">
+                                                                        {originalPrice} ₽
+                                                                    </span>
+                                                                    <span className="sm:text-lg text-sm font-bold">
+                                                                        {item.product.priceMain} ₽
+                                                                    </span>
+                                                                </>
+                                                            ) : (
+                                                                <span className="sm:text-lg text-sm font-bold">
                                                                     {item.product.priceMain} ₽
                                                                 </span>
-                                                            </>
-                                                        ) : (
-                                                            <span className="text-lg font-bold">
-                                                                {item.product.priceMain} ₽
-                                                            </span>
-                                                        )}
-                                                    </div>
+                                                            )}
+                                                        </div>
 
+                                                    </div>
                                                 </div>
-                                                <div className="flex items-center gap-2">
+                                                <div className="flex gap-2">
+                                                    <div className="flex items-center gap-2">
+                                                        <button
+                                                            onClick={() => handleDecreaseQuantity(item.product.id, item.selectedSize)}
+                                                            className="w-6 h-6 flex items-center justify-center border border-gray-300 rounded hover:bg-gray-100 text-sm cursor-pointer"
+                                                        >
+                                                            -
+                                                        </button>
+                                                        <span className="text-sm font-medium">
+                                                            {item.quantity} шт.
+                                                        </span>
+                                                        <button
+                                                            onClick={() => handleIncreaseQuantity(item.product.id, item.selectedSize)}
+                                                            className="w-6 h-6 flex items-center justify-center border border-gray-300 rounded hover:bg-gray-100 text-sm cursor-pointer"
+                                                        >
+                                                            +
+                                                        </button>
+                                                    </div>
                                                     <button
-                                                        onClick={() => handleDecreaseQuantity(item.product.id, item.selectedSize)}
-                                                        className="w-6 h-6 flex items-center justify-center border border-gray-300 rounded hover:bg-gray-100 text-sm cursor-pointer"
+                                                        className="p-2 hover:bg-gray-100 rounded cursor-pointer flex-shrink-0"
+                                                        onClick={() => handleRemoveFromCart(item.product.id, item.selectedSize, item.product.title)}
                                                     >
-                                                        -
-                                                    </button>
-                                                    <span className="text-sm font-medium">
-                                                        {item.quantity} шт.
-                                                    </span>
-                                                    <button
-                                                        onClick={() => handleIncreaseQuantity(item.product.id, item.selectedSize)}
-                                                        className="w-6 h-6 flex items-center justify-center border border-gray-300 rounded hover:bg-gray-100 text-sm cursor-pointer"
-                                                    >
-                                                        +
+                                                        <img src="img/header/trash.svg" alt="Удалить" className="w-5 h-5" />
                                                     </button>
                                                 </div>
-                                                <button
-                                                    className="p-2 hover:bg-gray-100 rounded cursor-pointer flex-shrink-0"
-                                                    onClick={() => handleRemoveFromCart(item.product.id, item.selectedSize, item.product.title)}
-                                                >
-                                                    <img src="/img/header/trash.svg" alt="Удалить" className="w-5 h-5" />
-                                                </button>
                                             </div>
                                         );
                                     })

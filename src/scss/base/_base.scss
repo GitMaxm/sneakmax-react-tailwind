@@ -13,7 +13,7 @@ body {
 	color: var(--text-color-main);
 	background-color: var(--bg) !important;
 	font-family: var(--font-family) !important;
-	font-size: 16px;
+	font-size: clamp(0.813rem, 0.744rem + 0.34vw, 1rem); // 16-13
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -48,7 +48,7 @@ img {
 
 .title-1 {
 	font-family: var(--second-family);
-	font-size: 36px;
+	font-size: clamp(1.625rem, 1.398rem + 1.14vw, 2.25rem); //36 -26
 	line-height: 140%;
 }
 

@@ -70,7 +70,7 @@ const ProductCartModal = observer(({
                     {/* Image section */}
                     <div className="aspect-square bg-gray-50 rounded flex items-center justify-center overflow-hidden">
                         <img
-                            src={`/img/catalog/product/${product.imgMain}`}
+                            src={`img/catalog/product/${product.imgMain}`}
                             alt={product.title}
                             className="max-w-full max-h-full object-contain"
                         />

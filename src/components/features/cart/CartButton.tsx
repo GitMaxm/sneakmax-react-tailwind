@@ -16,7 +16,7 @@ const CartButton = observer(({ onClick }: CartButtonProps) => {
             className="relative flex items-center gap-2 cursor-pointer hover:scale-115 transition"
             aria-label={`Открыть корзину. Товаров в корзине: ${cartStore.totalItems}`}
         >
-            <img src="/img/header/cart.svg" alt="Корзина" />
+            <img src="img/header/cart.svg" alt="Корзина" />
 
             <span className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 text-xs flex items-center justify-center">
                 {cartStore.totalItems}

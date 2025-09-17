@@ -24,7 +24,7 @@ const Header = () => {
                 </div>
 
                 {/* Нижняя часть шапки */}
-                <div className="header-bottom py-24">
+                <div className="header-bottom md:py-24 sm:py-16 py-10">
                     <div className="header-bottom-content max-w-xl">
                         <h1 className="title-1 mb-10">Кроссовки известных брендов с доставкой по России и СНГ</h1>
                         <p className="mb-10">Мы продаем кроссовки брендов Nike, Adidas, Puma, Reebok, Converse и многие другие по низким ценам</p>
