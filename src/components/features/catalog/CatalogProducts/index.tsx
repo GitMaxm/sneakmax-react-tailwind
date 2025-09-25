@@ -84,6 +84,16 @@ const CatalogProducts = observer(() => {
                     </div>
                 )}
 
+                {/* {productsStore.isLoading && <div>Загрузка...</div>}
+
+                {
+                    productsStore.error &&
+                    <div>
+                        Ошибка: {productsStore.error}
+                        <button onClick={productsStore.retryFetch}>Повторить</button>
+                    </div>
+                } */}
+
                 {/* Сообщение если товаров нет */}
                 {displayedProducts.length === 0 && (
                     <div className="mt-6 text-center text-gray-500">
@@ -93,7 +103,7 @@ const CatalogProducts = observer(() => {
                         }
                     </div>
                 )}
-            </div>
+            </div >
         </>
     );
 });

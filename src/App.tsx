@@ -11,6 +11,8 @@ import About from './components/sections/About';
 
 import { ToastContainer } from 'react-toastify';
 import CartModal from './components/features/cart/CartModal';
+import Footer from './components/sections/Footer';
+import Faq from './components/sections/faq';
 
 function App() {
   // Используем useRef для создания и сохранения экземпляра хранилища
@@ -22,11 +24,12 @@ function App() {
     <RootStoreContext.Provider value={storeRef.current}>
 
       <Header />
-
       <main className="main">
         <Catalog />
         <About />
+        <Faq />
       </main>
+      <Footer />
 
       {/* Toast контейнер */}
       <ToastContainer

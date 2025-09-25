@@ -1,14 +1,45 @@
 import { makeAutoObservable } from 'mobx';
-import products from '../data/products.json';
+// import products from '../data/products.json';
 import type { IProductItem } from "../types/products";
 import type { FilterState } from "../types/filters.d";
+import { URL_DATA } from '@/helper/urlData';
 
 class ProductsStore {
-    products: IProductItem[] = products;
+    products: IProductItem[] = [];
+    isLoading: boolean = false;
+    error: string | null = null;
 
     constructor() {
         makeAutoObservable(this);
+        this.fetchProducts(); // Автоматически загружаем товары при создании
     }
+
+    // Загрузка товаров с сервера
+    fetchProducts = async (): Promise<void> => {
+        this.isLoading = true;
+        this.error = null;
+
+        try {
+            const response = await fetch(`${URL_DATA}/products`);
+            if (!response.ok) {
+                throw new Error(`Ошибка загрузки: ${response.status}`);
+            }
+            const data = await response.json();
+            //тест
+            setTimeout(() => {
+                this.products = data;
+            }, 1000);
+        } catch (error) {
+            this.error = error instanceof Error ? error.message : 'Неизвестная ошибка';
+            console.error('Ошибка загрузки товаров:', error);
+        } finally {
+            this.isLoading = false;
+        }
+    };
+
+    retryFetch = async (): Promise<void> => {
+        await this.fetchProducts();
+    };
 
     getProductById = (id: string): IProductItem | undefined => {
         return this.products.find(product => product.id === id);

@@ -27,7 +27,7 @@ export const CatalogFilter = observer(() => {
 
     return (
         <aside className="w-full lg:w-1/4">
-            <div className="bg-[#FFF4EE] p-4 rounded-lg">
+            <div className="bg-[#FFF4EE] p-4 rounded-lg border-[var(--small-text)] border-1">
                 <h4 className="text-xl font-semibold mb-4">Подбор по параметрам</h4>
 
                 <PriceFilter

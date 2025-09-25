@@ -1,15 +1,13 @@
 import { observer } from "mobx-react-lite";
 import CartButton from "../features/cart/CartButton";
-import { navLinks } from "@/helper/navLink";
+import { navLinks } from "@/data/navLink";
 import { useStores } from "@/Context/rootStoreContext";
 
-// layout/Navigation.tsx
-// interface NavigationProps {
-//     onCartClick: () => void;
-//     cartItemsCount?: number;
-// }
+interface NavigationProps {
+    showCart: boolean;
+}
 
-const Navigation = observer(() => {
+const Navigation = observer(({ showCart }: NavigationProps) => {
 
     const { modalCartOpen } = useStores()
 
@@ -18,9 +16,9 @@ const Navigation = observer(() => {
     };
 
     return (
-        <div className="flex items-center justify-between py-3 border-b border-white gap-4 flex-wrap">
+        <div className="flex items-center justify-between py-3 gap-4 flex-wrap">
             {/* Логотип */}
-            <a href="#!" className="logo">SneakMax</a>
+            <a href="#" className="logo">SneakMax</a>
 
             {/* Навигация */}
             <nav className="nav">
@@ -30,9 +28,9 @@ const Navigation = observer(() => {
                             <a href={item.href} className="hover:underline">{item.name}</a>
                         </li>
                     ))}
-                    <li>
+                    {showCart && <li>
                         <CartButton onClick={handleCartModal} />
-                    </li>
+                    </li>}
                 </ul>
             </nav>
         </div>

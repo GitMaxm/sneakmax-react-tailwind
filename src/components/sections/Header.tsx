@@ -16,10 +16,10 @@ const Header = () => {
     // };
 
     return (
-        <header className="header text-white">
+        <header className="text-white">
             <div className="container">
-                <div className="relative">
-                    <Navigation />
+                <div className="relative border-b border-white">
+                    <Navigation showCart={true} />
                     {/* {isCartOpen && <CartDropdown onClose={handleCartClose} />} */}
                 </div>
 
