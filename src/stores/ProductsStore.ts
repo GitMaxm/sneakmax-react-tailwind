@@ -26,9 +26,7 @@ class ProductsStore {
             }
             const data = await response.json();
             //тест
-            setTimeout(() => {
-                this.products = data;
-            }, 1000);
+            this.products = data;
         } catch (error) {
             this.error = error instanceof Error ? error.message : 'Неизвестная ошибка';
             console.error('Ошибка загрузки товаров:', error);

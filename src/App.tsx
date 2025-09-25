@@ -12,7 +12,7 @@ import About from './components/sections/About';
 import { ToastContainer } from 'react-toastify';
 import CartModal from './components/features/cart/CartModal';
 import Footer from './components/sections/Footer';
-import Faq from './components/sections/faq';
+import Faq from './components/sections/Faq';
 
 function App() {
   // Используем useRef для создания и сохранения экземпляра хранилища

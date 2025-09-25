@@ -1,8 +1,8 @@
 import { observer } from "mobx-react-lite";
-import { useStores } from "../../../../Context/rootStoreContext";
+import { useStores } from "@/Context/rootStoreContext";
 import { toJS } from "mobx"; // Добавьте этот импорт
 
-import filterPrice from "../../../../helper/filterPrice";
+import filterPrice from "@/helper/filterPrice";
 import GenderFilter from "./GenderFilter";
 import { PriceFilter } from "./PriceFilter";
 import SizeFilter from "./SizeFilter";
