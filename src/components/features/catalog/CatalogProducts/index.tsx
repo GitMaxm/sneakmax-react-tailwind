@@ -39,37 +39,6 @@ const CatalogProducts = observer(() => {
         addedToCart(`${product.title} (размер: ${size})`);
     };
 
-    // 1. Показываем загрузку
-    if (productsStore.isLoading) {
-        return (
-            <div className="w-full lg:w-3/4 min-h-[850px] flex justify-center">
-                <div className="text-center">
-                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-                    <p>Загрузка товаров...</p>
-                </div>
-            </div>
-        );
-    }
-
-    // 2. Показываем ошибку
-    if (productsStore.error) {
-        return (
-            <div className="w-full lg:w-3/4 min-h-[850px] flex justify-center">
-                <div className="text-center">
-                    <p className="text-red-600 text-lg mb-4">Ошибка загрузки товаров</p>
-                    <p className="text-gray-600 mb-4">{productsStore.error}</p>
-                    <Button
-                        onClick={productsStore.retryFetch}
-                        ariaLabel="Повторить загрузку товаров"
-                    >
-                        Попробовать снова
-                    </Button>
-                </div>
-            </div>
-        );
-    }
-
-    // 3. Основной контент (только когда данные загружены и нет ошибок)
     return (
         <>
             <ProductCartModal
