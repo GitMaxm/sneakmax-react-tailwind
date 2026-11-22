@@ -1,6 +1,6 @@
-export interface FilterState {
-    priceMin: number;
-    priceMax: number;
-    gender: string | undefined;
-    sizes: number[];
+export interface IFilterState {
+  priceMin: number;
+  priceMax: number;
+  gender: string | undefined;
+  sizes: number[];
 }

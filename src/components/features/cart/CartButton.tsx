@@ -1,29 +1,30 @@
-import { observer } from "mobx-react-lite";
-import { useStores } from "@/Context/rootStoreContext";
+import { observer } from 'mobx-react-lite';
+import { useStores } from '@/Context/rootStoreContext';
 
-// features/cart/CartButton.tsx
 interface CartButtonProps {
-    onClick: () => void;
+  onClick: () => void;
 }
 
 const CartButton = observer(({ onClick }: CartButtonProps) => {
+  const { cartStore } = useStores();
 
-    const { cartStore } = useStores();
+  return (
+    <button
+      onClick={onClick}
+      className="relative flex cursor-pointer items-center gap-2
+        transition hover:scale-115"
+      aria-label={`Открыть корзину. Товаров в корзине: ${cartStore.totalItems}`}
+    >
+      <img src="img/header/cart.svg" alt="Корзина" />
 
-    return (
-        <button
-            onClick={onClick}
-            className="relative flex items-center gap-2 cursor-pointer hover:scale-115 transition"
-            aria-label={`Открыть корзину. Товаров в корзине: ${cartStore.totalItems}`}
-        >
-            <img src="img/header/cart.svg" alt="Корзина" />
-
-            <span className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 text-xs flex items-center justify-center">
-                {cartStore.totalItems}
-            </span>
-
-        </button>
-    );
+      <span
+        className="absolute -top-2 -right-2 flex h-5 w-5 items-center
+          justify-center rounded-full bg-red-500 text-xs text-white"
+      >
+        {cartStore.totalItems}
+      </span>
+    </button>
+  );
 });
 
 export default CartButton;

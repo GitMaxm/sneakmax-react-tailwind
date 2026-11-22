@@ -1,20 +1,19 @@
-import { makeAutoObservable } from "mobx";
+import { makeAutoObservable } from 'mobx';
 
 class ModalCartOpen {
-    isCartModalOpen = false;
+  isCartModalOpen = false;
 
-    constructor() {
-        makeAutoObservable(this);
-    }
+  constructor() {
+    makeAutoObservable(this);
+  }
 
-    // Методы для управления модалкой корзины
-    openCartModal = () => {
-        this.isCartModalOpen = true;
-    };
+  openCartModal = () => {
+    this.isCartModalOpen = true;
+  };
 
-    closeCartModal = () => {
-        this.isCartModalOpen = false;
-    };
+  closeCartModal = () => {
+    this.isCartModalOpen = false;
+  };
 }
 
 export default new ModalCartOpen();

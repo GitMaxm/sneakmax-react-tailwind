@@ -1,7 +1,7 @@
 import './fonts.css';
 import './global.css';
 
-import { useRef } from 'react'; // Импортируем useRef
+import { useRef } from 'react';
 
 import Header from './components/sections/Header';
 import Catalog from './components/sections/Catalog';
@@ -15,14 +15,10 @@ import Footer from './components/sections/Footer';
 import Faq from './components/sections/Faq';
 
 function App() {
-  // Используем useRef для создания и сохранения экземпляра хранилища
   const storeRef = useRef(new RootStore());
-  // Благодаря useRef, значение сохраняется между рендерами
 
   return (
-    // Передаем .current, так как useRef возвращает объект { current: значение }
     <RootStoreContext.Provider value={storeRef.current}>
-
       <Header />
       <main className="main">
         <Catalog />
@@ -31,7 +27,6 @@ function App() {
       </main>
       <Footer />
 
-      {/* Toast контейнер */}
       <ToastContainer
         position="top-right"
         autoClose={3000}
@@ -46,7 +41,6 @@ function App() {
       />
 
       <CartModal />
-
     </RootStoreContext.Provider>
   );
 }

@@ -1,4 +1,3 @@
-// filterPrice.ts
 const MIN: number = 1850;
 const MAX: number = 25768;
 

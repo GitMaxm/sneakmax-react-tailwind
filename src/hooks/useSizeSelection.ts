@@ -1,20 +1,21 @@
-// hooks/useSizeSelection.ts
 import { useState } from 'react';
 
 export const useSizeSelection = () => {
-    const [selectedSize, setSelectedSize] = useState<number | null>(null); // number | null вместо string
+  const [selectedSize, setSelectedSize] = useState<number | null>(
+    null,
+  );
 
-    const handleSizeSelect = (size: number) => {
-        setSelectedSize(prev => prev === size ? null : size); // Toggle selection
-    };
+  const handleSizeSelect = (size: number) => {
+    setSelectedSize((prev) => (prev === size ? null : size));
+  };
 
-    const resetSizeSelection = () => {
-        setSelectedSize(null);
-    };
+  const resetSizeSelection = () => {
+    setSelectedSize(null);
+  };
 
-    return {
-        selectedSize,
-        handleSizeSelect,
-        resetSizeSelection
-    };
+  return {
+    selectedSize,
+    handleSizeSelect,
+    resetSizeSelection,
+  };
 };
