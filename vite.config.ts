@@ -5,10 +5,10 @@ import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "/sneakmax-react-tailwind/",
+  base: '/sneakmax-react-tailwind/',
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),
-    }
-  }
+    },
+  },
 });
