@@ -5,6 +5,7 @@ import { useStores } from "@/Context/rootStoreContext";
 import { useModal } from "@/hooks/useModal";
 import { useCartActions } from "@/hooks/useCartActions";
 import Button from "@/components/ui/Button";
+import type { ICartItem } from "@/types/products";
 
 const CartModal = observer(() => {
     const [isProductsShown, setIsProductsShown] = useState(false);
@@ -104,7 +105,7 @@ const CartModal = observer(() => {
                         {isProductsShown && (
                             <div className="overflow-y-auto custom-scrollbar max-h-80 space-y-4">
                                 {cartStore.cartItems.length > 0 ? (
-                                    cartStore.cartItems.map((item) => {
+                                    cartStore.cartItems.map((item: ICartItem) => {
                                         const originalPrice = item.product.priceOld || item.product.priceMain;
                                         const hasDiscount = !!item.product.priceOld;
 

@@ -5,7 +5,7 @@ import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "./",
+  base: "/sneakmax-react-tailwind/",
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),
