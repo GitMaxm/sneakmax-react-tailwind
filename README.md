@@ -6,7 +6,11 @@
 
 ## Стек
 
-React 19, TypeScript, Vite (SWC), Tailwind CSS 4, SCSS, MobX.
+React 19, TypeScript, Vite (SWC), Tailwind CSS 4, SCSS.
+
+## Библиотеки
+
+MobX, react-toastify
 
 ## Запуск
 
